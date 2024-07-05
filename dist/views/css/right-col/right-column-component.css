@@ -1,0 +1,431 @@
+.col.right {
+	grid-area: Secondary-Main;
+	display: grid;
+	width: 100%;
+	height: 40rem;
+	row-gap: 0.5rem;
+	grid-template-columns: 66.7% calc(100% - 66.7%);
+	grid-template-rows: repeat(3, 33.33%);
+	grid-template-areas:
+		"Blog Profile-Info"
+		"Blurbs Friends"
+		"Blurbs Comments";
+	padding: 0;
+}
+
+.blurbs {
+	grid-area: Blurbs;
+}
+
+.blog-preview {
+	grid-area: Blog;
+}
+
+.friends#comments {
+	grid-area: Comments;
+}
+
+.profile-info {
+	grid-area: Profile-Info;
+}
+
+.friends {
+	grid-area: Friends;
+}
+
+.container .profile .blurbs {
+	padding: 0 1rem;
+	margin: 0;
+}
+
+.container .col.right .blurbs .inner {
+	padding: 0;
+}
+
+.blurbs .heading {
+	display: none;
+}
+
+/* Profile Info Styling */
+
+.container .profile .profile-info {
+	padding: 0;
+	margin: 0 0 0 -0.5rem;
+	border: none;
+	background: 0% 30% / cover url('../../spaceheyprofile_files/TertiaryImages/leeandaak.png');
+	border-radius: 0.25rem;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	.inner {
+		z-index: 1;
+		color: var(--contrast-text-color-invert);
+		text-shadow: 0px 0px 5px var(--contrast-text-color);
+		position: initial;
+	}
+
+	.inner::before {
+		content: ' ';
+		height: 50rem;
+		aspect-ratio: 1;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		transform: translate(-50%, -50%);
+		background: radial-gradient(rgba(255, 255, 255, 0.3), transparent, transparent);
+		mix-blend-mode: soft-light;
+	}
+
+	&::after {
+		content: ' ';
+		width: calc(100% - 4px);
+		height: calc(100% - 5px);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: hsla(var(--tertiary-100), 0.5);
+		border-radius: 0.18rem;
+	}
+}
+
+/* Friends */
+
+.container .col.right .friends {
+	margin: 0 0 0 -0.5rem !important;
+	width: 100%;
+	height: 100%;
+
+	.heading {
+		display: none;
+	}
+}
+
+.container .profile .friends .inner {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	padding: 0;
+
+	>p {
+		display: none;
+	}
+}
+
+@keyframes go {
+	to {
+		inset-inline-start: calc(var(--marquee-item-width) * -1);
+	}
+}
+
+.friends .friends-grid {
+	.person:nth-of-type(1) {
+		--marquee-item-index: 1;
+	}
+
+	.person:nth-of-type(2) {
+		--marquee-item-index: 2;
+	}
+
+	.person:nth-of-type(3) {
+		--marquee-item-index: 3;
+	}
+
+	.person:nth-of-type(4) {
+		--marquee-item-index: 4;
+	}
+
+	.person:nth-of-type(5) {
+		--marquee-item-index: 5;
+	}
+
+	.person:nth-of-type(6) {
+		--marquee-item-index: 6;
+	}
+
+	.person:nth-of-type(7) {
+		--marquee-item-index: 7;
+	}
+
+	.person:nth-of-type(8) {
+		--marquee-item-index: 8;
+	}
+}
+
+.profile .friends .friends-grid {
+	--marquee-max-width: 100%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	block-size: var(--marquee-item-height);
+	max-inline-size: var(--marquee-max-width);
+	position: relative;
+	overflow: hidden;
+	mask-image: linear-gradient(to right,
+			hsl(0 0% 0% / 0),
+			hsl(0 0% 0% / 1) 20%,
+			hsl(0 0% 0% / 1) 80%,
+			hsl(0 0% 0% / 0));
+	flex: 1;
+
+	.person {
+		--marquee-item-width: 50%;
+		--marquee-item-height: 100%;
+		--marquee-duration: 60s;
+		--marquee-items: 8;
+	}
+
+	.person {
+		padding: 0;
+		width: 50%;
+		height: 100%;
+		--marquee-item-offset: max(calc(var(--marquee-item-width) * var(--marquee-items)),
+				calc(100% + var(--marquee-item-width)));
+		--marquee-delay: calc(var(--marquee-duration) / var(--marquee-items) * (var(--marquee-items) - var(--marquee-item-index)) * -1);
+		position: absolute;
+		inset-inline-start: var(--marquee-item-offset);
+		transform: translateX(-50%);
+		animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
+
+		>a {
+			filter: drop-shadow(0px 0px 2px var(--contrast-text-color));
+		}
+
+		a:nth-child(1) {
+			position: absolute;
+			bottom: 0.5rem;
+			left: 0.5rem;
+			z-index: 2;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			>p {
+				color: var(--contrast-text-color-invert);
+				margin: 0;
+				text-align: left;
+
+				&::after {
+					content: 'Friends with';
+					position: absolute;
+					left: 0;
+					top: -1.7rem;
+					font-size: 0.8rem;
+					text-wrap: nowrap;
+					font-weight: 400;
+					width: fit-content;
+					padding: 0.2rem 0.5rem;
+					border: 1px solid var(--contrast-text-color-invert);
+					border-radius: 99px;
+				}
+			}
+		}
+
+		a:nth-child(2) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			&::before {
+				content: ' ';
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				background: linear-gradient(0deg, hsla(var(--tertiary-100), 0.75), transparent);
+				border-radius: 0.25rem;
+				z-index: 1;
+				mix-blend-mode: darken;
+			}
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				height: 100%;
+				width: 100%;
+				border-radius: 0.25rem;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+.blog-preview {
+	display: flex;
+	gap: 5px 5px;
+	padding: 0 1rem;
+}
+
+@supports (container-type: inline-size) {
+	@keyframes scrollBlogPreview {
+		0% {
+			background-position: 0 0;
+		}
+
+		100% {
+			background-position: 125px 125px;
+		}
+	}
+
+	.blog-preview>p,
+	.blog-preview>h4 {
+		container-type: inline-size;
+		width: 100%;
+		height: 100%;
+		padding: 0.5rem;
+		margin: 0;
+		text-align: center;
+		font-weight: 600;
+		font-size: 0.75rem;
+		writing-mode: vertical-lr;
+		border: hsl(var(--tertiary-300)) 1.75px solid;
+		border-radius: 0.25rem;
+		background: url('https://static.vecteezy.com/system/resources/thumbnails/003/783/630/small/abstract-black-and-white-grid-striped-geometric-seamless-pattern-illustration-free-vector.jpg');
+		background-size: 125px 125px;
+		background-color: hsl(var(--tertiary-200));
+		background-blend-mode: multiply;
+		animation: scrollBlogPreview 10s infinite linear forwards;
+		display: inline-block;
+		overflow: hidden;
+	}
+
+	.blog-preview>p::after,
+	.blog-preview>h4::after {
+		content: ' ';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		mask-image: linear-gradient(180deg, white, transparent);
+		pointer-events: none;
+		image-rendering: optimizeQuality;
+		mix-blend-mode: lighten;
+		transform: scale(1.5);
+		transition: transform 300ms, filter 200ms, background-position 300ms;
+	}
+
+	.blog-preview>p:hover::after,
+	.blog-preview>h4:hover::after {
+		transform: scale(1);
+		background-position: center 100%;
+	}
+
+	.blog-preview>p>a::after,
+	.blog-preview>h4>a::after {
+		content: ' ';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background: transparent;
+		top: 0;
+		left: 0;
+		cursor: help;
+	}
+}
+
+@supports not (container-type: inline-size) {
+
+	.blog-preview>p,
+	.blog-preview>h4 {
+		width: 100%;
+		height: 100%;
+		padding: 0.5rem;
+		margin: 0;
+		text-align: center;
+		font-weight: 600;
+		font-size: 0.5rem;
+		writing-mode: vertical-lr;
+		border: hsl(var(--tertiary-300)) 1.75px solid;
+		border-radius: 0.25rem;
+		background: center / cover url('./spaceheyprofile_files/aakcar.png');
+		background-size: 125px 125px;
+		background-color: hsl(var(--tertiary-200));
+		background-blend-mode: multiply;
+		animation: scrollBlogPreview 10s infinite linear forwards;
+		display: inline-block;
+		overflow: hidden;
+	}
+}
+
+.blog-preview {
+	>p {
+		transition: all 0.5s;
+		flex: 1;
+
+		&:hover {
+			flex: 2;
+		}
+	}
+
+	>h4 {
+		transition: all 0.5s;
+		flex: 3;
+
+		&:hover {
+			flex: 4;
+		}
+	}
+}
+
+.blog-preview>p>a,
+.blog-preview>h4>a,
+.blog-preview {
+	color: var(--contrast-text-color-invert);
+}
+
+.container .profile .contact {
+	border: none;
+
+	.heading {
+		display: none;
+	}
+}
+
+.profile .contact .inner {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+
+	.f-col {
+		display: flex;
+		justify-content: center;
+		padding: 0.5rem 1rem;
+		border: 1px solid hsl(var(--main-color));
+		border-radius: 0.25rem;
+		text-align: center;
+		text-wrap: nowrap;
+		flex: 1;
+		transition: box-shadow 350ms;
+
+		a {
+			color: var(--contrast-text-color-invert);
+			font-weight: 800;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.05);
+			box-shadow: 0px 0px 1rem hsla(var(--main-color), 0.75);
+			cursor: pointer;
+		}
+	}
+
+	.f-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 0;
+	}
+
+	img {
+		display: none;
+	}
+}

@@ -1,0 +1,34 @@
+.profile .col.w-40.left .table-section {
+	border: none;
+	width: 100%;
+	height: 100%;
+	margin-block: 0;
+
+	.heading {
+		display: none;
+	}
+
+	table, tbody, tr {
+		display: contents;
+	}
+
+	td {
+		display: none;
+	}
+	
+	margin-bottom: 0.5rem;
+}
+
+.table-section tbody tr:nth-of-type(1) td:nth-of-type(2) {
+	display: flex !important;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	background: transparent;
+	padding: 0;
+	gap: 0.5rem;
+
+	>p {
+		display: none;
+	}
+}

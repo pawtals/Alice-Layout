@@ -1,0 +1,24 @@
+@media (max-width: 1000px) {
+    .col.right {
+        grid-template-areas: 
+        "Profile-Info"
+        "Blog"
+        "Blurbs"
+        "Friends"
+        "Comments";
+        grid-template-columns: 100%;
+        grid-template-rows: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .blurbs .section:last-of-type {margin-bottom: 0 !important;}
+
+    .friends:not(#comments), .blog-preview {height: 20rem;}
+
+    #comments {margin-bottom: 1.5rem !important;}
+
+    html body .container .row.profile .col.right > * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}

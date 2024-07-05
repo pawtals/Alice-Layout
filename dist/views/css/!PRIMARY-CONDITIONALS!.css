@@ -1,0 +1,69 @@
+@media (max-width: 1000px) {
+    body .container {
+        grid-template-areas: 
+        "Main Main"
+        "Footer Sidebar";
+        grid-template-rows: 100% 0% !important;
+        grid-template-columns: 25vw 75vw !important;
+        &:has(footer:hover) {
+            grid-template-rows: 80% 15%;
+        }
+    }
+
+    nav .top .right {
+        display: contents !important;
+        a, form {
+            order: 10;
+            margin: 0 0.5rem 0.5rem 0.5rem;
+        }
+    }
+
+    .row.profile {
+        grid-template-areas:
+		"Padding Padding"
+		"Section Section"
+		"Secondary-Main Secondary-Main";
+        grid-template-rows: 2rem var(--hero-padding) 1 1;
+    }
+
+    .col.w-40.left, .col.right {height: auto !important; padding: 0 0.5rem;}
+
+    .container footer {
+        &::after {
+            content: ' ';
+            display: flex;
+            position: absolute;
+            bottom: 0; left: 0;
+            background: hsl(var(--tertiary-200));
+            border: 1px hsl(var(--tertiary-300)) solid;
+            margin: 0 0 0 0;
+            width: 50%;
+            height: 3vh;
+            border-radius: 0 0.25rem 0 0;
+            transition: bottom 300ms ease-in-out;
+            transition-delay: 20ms;
+            z-index: 10;
+        }
+    }
+
+    body .container:has(footer:hover, nav:hover) {
+        
+        grid-template-rows: 20% 80% !important;
+        footer::after {
+            bottom: 80%;
+        }
+    }
+}
+
+/* 
+
+Make footer stick out and let user tap on it 
+
+Like a folder tab and it will pull up the entire nav thingy
+
+Fill the screen with it and make the footer hide it again 
+
+Find out how to do that and boom
+
+*/
+

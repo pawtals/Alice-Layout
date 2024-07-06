@@ -275,10 +275,7 @@
 	writing-mode: vertical-lr;
 	border: hsl(var(--tertiary-300)) 1.75px solid;
 	border-radius: 0.25rem;
-	background-color: hsl(var(--tertiary-200));
-	background-blend-mode: multiply;
 	display: inline-block;
-	overflow: hidden;
 }
 
 

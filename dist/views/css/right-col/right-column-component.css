@@ -13,6 +13,13 @@
 	padding: 0;
 }
 
+.col.right:not(:has(.profile-info)) {
+	grid-template-areas: 
+	"Blog Friends"
+	"Blurbs Comments"
+	"Blurbs Comments";;
+}
+
 .blurbs {
 	grid-area: Blurbs;
 }

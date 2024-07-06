@@ -265,7 +265,6 @@
 
 .blog-preview>p,
 .blog-preview>h4 {
-	container-type: inline-size;
 	width: 100%;
 	height: 100%;
 	padding: 0.5rem;

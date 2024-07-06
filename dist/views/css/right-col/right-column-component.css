@@ -231,6 +231,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
+
 			&::before {
 				content: ' ';
 				height: 100%;
@@ -260,97 +261,27 @@
 	padding: 0 1rem;
 }
 
-@supports (container-type: inline-size) {
-	@keyframes scrollBlogPreview {
-		0% {
-			background-position: 0 0;
-		}
 
-		100% {
-			background-position: 125px 125px;
-		}
-	}
 
-	.blog-preview>p,
-	.blog-preview>h4 {
-		container-type: inline-size;
-		width: 100%;
-		height: 100%;
-		padding: 0.5rem;
-		margin: 0;
-		text-align: center;
-		font-weight: 600;
-		font-size: 0.75rem;
-		writing-mode: vertical-lr;
-		border: hsl(var(--tertiary-300)) 1.75px solid;
-		border-radius: 0.25rem;
-		background: url('https://static.vecteezy.com/system/resources/thumbnails/003/783/630/small/abstract-black-and-white-grid-striped-geometric-seamless-pattern-illustration-free-vector.jpg');
-		background-size: 125px 125px;
-		background-color: hsl(var(--tertiary-200));
-		background-blend-mode: multiply;
-		animation: scrollBlogPreview 10s infinite linear forwards;
-		display: inline-block;
-		overflow: hidden;
-	}
-
-	.blog-preview>p::after,
-	.blog-preview>h4::after {
-		content: ' ';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		mask-image: linear-gradient(180deg, white, transparent);
-		pointer-events: none;
-		image-rendering: optimizeQuality;
-		mix-blend-mode: lighten;
-		transform: scale(1.5);
-		transition: transform 300ms, filter 200ms, background-position 300ms;
-	}
-
-	.blog-preview>p:hover::after,
-	.blog-preview>h4:hover::after {
-		transform: scale(1);
-		background-position: center 100%;
-	}
-
-	.blog-preview>p>a::after,
-	.blog-preview>h4>a::after {
-		content: ' ';
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		background: transparent;
-		top: 0;
-		left: 0;
-		cursor: help;
-	}
+.blog-preview>p,
+.blog-preview>h4 {
+	container-type: inline-size;
+	width: 100%;
+	height: 100%;
+	padding: 0.5rem;
+	margin: 0;
+	text-align: center;
+	font-weight: 600;
+	font-size: 0.75rem;
+	writing-mode: vertical-lr;
+	border: hsl(var(--tertiary-300)) 1.75px solid;
+	border-radius: 0.25rem;
+	background-color: hsl(var(--tertiary-200));
+	background-blend-mode: multiply;
+	display: inline-block;
+	overflow: hidden;
 }
 
-@supports not (container-type: inline-size) {
-
-	.blog-preview>p,
-	.blog-preview>h4 {
-		width: 100%;
-		height: 100%;
-		padding: 0.5rem;
-		margin: 0;
-		text-align: center;
-		font-weight: 600;
-		font-size: 0.5rem;
-		writing-mode: vertical-lr;
-		border: hsl(var(--tertiary-300)) 1.75px solid;
-		border-radius: 0.25rem;
-		background: none;
-		background-size: 125px 125px;
-		background-color: hsl(var(--tertiary-200));
-		background-blend-mode: multiply;
-		animation: scrollBlogPreview 10s infinite linear forwards;
-		display: inline-block;
-		overflow: hidden;
-	}
-}
 
 .blog-preview {
 	>p {

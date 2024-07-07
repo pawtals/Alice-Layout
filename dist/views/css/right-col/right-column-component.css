@@ -313,7 +313,7 @@
 	}
 
 	&::after {
-		content: 'https://i.ibb.co/Gdd19RP/radial-6c0d.png';
+		content: url('https://i.ibb.co/Gdd19RP/radial-6c0d.png');
 		position: absolute; top: 0; left: 0;
 		width: 100%;
 		height: 100%;

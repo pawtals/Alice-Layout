@@ -287,7 +287,7 @@
 	position: relative;
 }
 
-@keyframes rotate {
+@keyframes rotateinf {
 	0% {
 		transform: rotate3d(1, 1, 1, 0deg) scale(0);
 	}
@@ -329,7 +329,7 @@
 		transform: rotate3d(1, 1, 1, 0deg);
 		position: absolute;
 
-		animation: rotate 10s linear(
+		animation: rotateinf 10s linear(
 			0, 0.005 2.9%, 0.018 5.3%, 0.04 8.2%, 0.071 10.9%, 0.102 13%, 0.143 14.9%,
 			0.19 16.4%, 0.246 17.7%, 0.293 19.8%, 0.32 21.6%, 0.346 23.8%, 0.37 26.4%,
 			0.392 29.3%, 0.412 32.6%, 0.431 36.2%, 0.462 44.6%, 0.477 50.7%, 0.489 57.4%,

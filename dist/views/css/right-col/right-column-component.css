@@ -287,6 +287,16 @@
 	position: relative;
 }
 
+@keyframes rotate {
+	0% {
+		transform: rotate3d(1, 1, 1, 0deg);
+	}
+
+	100% {
+		transform: rotate3d(1, 1, 1, 360deg);
+	}
+}
+
 .blog-preview p > span.pinned {
 	position: absolute;
 	width: 1.5rem;
@@ -310,6 +320,13 @@
 		height: 100%;
 		transform: rotate3d(1, 1, 1, 0deg);
 		position: absolute;
+
+		animation: rotate 1s linear(
+			0, 0.009, 0.026 2%, 0.086 4.4%, 0.462 15.1%, 0.558, 0.639 21.2%, 0.713,
+			0.775 27.9%, 0.828 31.5%, 0.872 35.3%, 0.909 39.6%, 0.939 44.4%, 0.961 49.8%,
+			0.977 56.1%, 0.987 63.2%, 0.994 71.9%, 1
+		) forwards infinite;
+
 		top: 0; left: 0;
 	}
 

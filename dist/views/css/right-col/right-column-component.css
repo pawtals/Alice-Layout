@@ -283,9 +283,16 @@
 	border: hsl(var(--tertiary-300)) 1.75px solid;
 	border-radius: 0.25rem;
 	display: inline-block;
-	text-shadow: 0px 0px 3px hsl(var(--tertiary-100));
+	text-shadow: 0px 0px 6px hsl(var(--tertiary-100));
+	position: relative;
 }
 
+.blog-preview > span.pinned {
+	position: absolute;
+	width: 1.5rem;
+	height: 1.5rem;
+	top: 0; right: 0;
+}
 
 .blog-preview {
 	>p {

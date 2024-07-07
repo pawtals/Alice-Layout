@@ -292,12 +292,8 @@
 		transform: rotate3d(1, 1, 1, 0deg) scale(0);
 	}
 
-	40% {
-		transform: rotate3d(1, 50, 1, 160deg) translateX(-2px) scale(1.75);
-	}
-
-	55% {
-		transform: rotate3d(1, 50, 2, 190deg) translateX(-2px) scale(1.67);
+	65% {
+		transform: rotate3d(15, 0, 9, 79deg) scale(1.86);
 	}
 
 	100% {
@@ -366,7 +362,7 @@
 		transform: scale(1.1);
 		background: center / contain no-repeat url('https://i.ibb.co/Gdd19RP/radial-6c0d.png');
 		filter: var(--icon-hsl-filter);
-		animation: rotateinf 10s linear(
+		animation: grow 10s linear(
 			0, 0.005 2.9%, 0.017 5.3%, 0.04 8.2%, 0.071 10.9%, 0.102 13%, 0.143 14.9%,
 			0.19 16.4%, 0.246 17.7%, 0.291 19.7%, 0.318 21.4%, 0.343 23.4%, 0.366 25.8%,
 			0.388 28.5%, 0.411 31.9%, 0.431 35.8%, 0.45 40%, 0.466 44.6%, 0.487 53.3%,

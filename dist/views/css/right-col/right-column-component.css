@@ -292,8 +292,8 @@
 		transform: rotate3d(1, 1, 1, 0deg) scale(0);
 	}
 
-	65% {
-		transform: rotate3d(15, 0, 9, 79deg) scale(1.86);
+	50% {
+		transform: rotate3d(1, 1, 1, 180deg) scale(1.86);
 	}
 
 	100% {
@@ -308,8 +308,8 @@
 	}
 
 	67% {
-		transform: scale(1.27);
-		opacity: 0.8;
+		transform: scale(1.77);
+		opacity: 0.86;
 	}
 
 	100% {

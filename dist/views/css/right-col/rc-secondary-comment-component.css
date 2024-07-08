@@ -1,6 +1,7 @@
 body .container .friends#comments {
 	width: 100%;
 	height: fit-content;
+	margin: 0 0 0.5rem 0;
 
 	.inner {
 		width: 100%;

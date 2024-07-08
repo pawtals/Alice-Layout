@@ -110,6 +110,23 @@
 		text-align: center;
 	}
 
+	p.online {
+		padding: 0.75rem;
+		background: linear-gradient(
+			90deg, 
+			var(--main-color-300-hsl), 
+			var(--main-color-400-hsl)
+		);
+		border-radius: 0.25rem;
+		background-size: 200% 100%;
+		font-size: 0.75rem;
+		color: var(--contrast-text-color);
+		box-shadow: 0px 0px 4px hsl(var(--main-color-300-hsla));
+		img {
+			display: none;
+		}
+	}
+
 	p:not(p:nth-child(1)) {
 		width: 30cqw;
 		text-align: center;

@@ -304,12 +304,30 @@
 	}
 }
 
+@keyframes highlight {
+	0% {
+		translate: scale(0);
+		opacity: 0;
+	}
+
+	80% {
+		translate: scale(0.8);
+		opacity: 0.75;
+	}
+
+	100% {
+		translate: scale(1);
+		opacity: 1;
+	}
+}
+
 .blog-preview p > span.pinned {
 	position: absolute;
 	width: 1.5rem;
 	height: 1.5rem;
 	top: -0.75rem; right: -0.75rem;
 	z-index: 10;
+	filter: drop-shadow(0px 0px 4px hsl(--contrast-text-color));
 	img {
 		margin: 0 !important;
 		width: 100% !important;	
@@ -318,6 +336,19 @@
 		content-visibility: hidden;
 		background: center / contain no-repeat url('https://uxwing.com/wp-content/themes/uxwing/download/tools-equipment-construction/pin-icon.png');
 		z-index: 3;
+	}
+
+    &::before {
+		content: ' ';
+		position: absolute; top: 0; left: 0;
+		width: 100%;
+		height: 100%;
+		background: center / contain no-repeat url('https://i.bb.co/Gdd19RP/radial-6c0d.png');
+		animation: highlight 3.2s infinite linear(
+   			 0, 0.005, 0.02 2.1%, 0.081 4.7%, 0.467 15.7%, 0.563, 0.645, 0.717,
+   			 0.977 56.5%, 0.987 63.6%, 0.994 72.3%, 1
+   	 		0.778 28.5%, 0.829 32%, 0.872 35.8%, 0.909 40.1%, 0.938 44.9%, 0.961 50.3%,
+  		);
 	}
 
 	&::after {

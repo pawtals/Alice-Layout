@@ -93,6 +93,23 @@
 	image-rendering: pixelated;
 }
 
+@keyframes highlight {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	60% {
+		transform: scale(1.25);
+		opacity: 0.8;
+	}
+
+	100% {
+		transform: scale(1.68);
+		opacity: 0;
+	}
+}
+
 .row.profile .left .details {
 	font-size: 1rem;
 	position: absolute;
@@ -125,7 +142,12 @@
 		box-shadow: 0px 0px 4px hsl(var(--main-color-300-hsla));
 		border: 1px solid hsl(var(--main-color-300-hsl));
 		img {
-			display: none;
+			display: inline-block;
+			content-visibility: hidden;
+			border-radius: 50%;
+			background: hsl(var(--contrast-text-color-invert));
+			width: 0.75rem; height: 0.75rem;
+			animation: highlight 3s linear infinite;
 		}
 	}
 

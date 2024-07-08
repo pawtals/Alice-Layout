@@ -310,14 +310,14 @@
 		opacity: 0;
 	}
 
-	80% {
+	60% {
 		transform: scale(1.9);
-		opacity: 0.75;
+		opacity: 0.8;
 	}
 
 	100% {
 		transform: scale(2.2);
-		opacity: 1;
+		opacity: 0;
 	}
 }
 
@@ -345,6 +345,7 @@
 		height: 100%;
 		background: center / contain no-repeat url('https://i.ibb.co/Gdd19RP/radial-6c0d.png');
 		animation: highlight 3.2s infinite linear;
+		filter: var(--icon-hsl-filter);
 	}
 
 	&::after {

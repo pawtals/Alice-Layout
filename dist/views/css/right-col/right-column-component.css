@@ -306,17 +306,17 @@
 
 @keyframes highlight {
 	0% {
-		translate: scale(0);
+		transform: scale(0);
 		opacity: 0;
 	}
 
 	80% {
-		translate: scale(1.9);
+		transform: scale(1.9);
 		opacity: 0.75;
 	}
 
 	100% {
-		translate: scale(2.2);
+		transform: scale(2.2);
 		opacity: 1;
 	}
 }
@@ -343,7 +343,7 @@
 		position: absolute; top: 0; left: 0;
 		width: 100%;
 		height: 100%;
-		background: center / contain no-repeat url('https://i.bb.co/Gdd19RP/radial-6c0d.png');
+		background: center / contain no-repeat url('https://i.ibb.co/Gdd19RP/radial-6c0d.png');
 		animation: highlight 3.2s infinite linear;
 	}
 

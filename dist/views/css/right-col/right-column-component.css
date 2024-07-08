@@ -344,11 +344,7 @@
 		width: 100%;
 		height: 100%;
 		background: center / contain no-repeat url('https://i.bb.co/Gdd19RP/radial-6c0d.png');
-		animation: highlight 3.2s infinite linear(
-   			 0, 0.005, 0.02 2.1%, 0.081 4.7%, 0.467 15.7%, 0.563, 0.645, 0.717,
-   			 0.977 56.5%, 0.987 63.6%, 0.994 72.3%, 1
-   	 		0.778 28.5%, 0.829 32%, 0.872 35.8%, 0.909 40.1%, 0.938 44.9%, 0.961 50.3%,
-  		);
+		animation: highlight 3.2s infinite linear;
 	}
 
 	&::after {

@@ -111,6 +111,7 @@
 	}
 
 	p.online {
+		width: fit-content;
 		padding: 0.75rem;
 		background: linear-gradient(
 			90deg, 
@@ -122,6 +123,7 @@
 		font-size: 0.75rem;
 		color: var(--contrast-text-color);
 		box-shadow: 0px 0px 4px hsl(var(--main-color-300-hsla));
+		border: 1px solid hsl(var(--main-color-300-hsl));
 		img {
 			display: none;
 		}

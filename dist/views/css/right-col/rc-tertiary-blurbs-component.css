@@ -49,6 +49,16 @@
 	}
 }
 
+.blurbs .inner *.target-element-t {
+	&:target {
+		display: none;
+	}
+
+	&:not(:target) {
+		display: initial;
+	}
+}
+
 .inner .ago#mimic-post-ago {
 	display: block;
 	margin: 0.5rem 0 0.25rem 0;

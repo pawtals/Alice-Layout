@@ -47,6 +47,7 @@
 
 .container .col.right .blurbs .inner {
 	padding: 0;
+	line-height: max(0.95em, 16px);
 }
 
 .blurbs .heading {
@@ -279,7 +280,7 @@
 	text-align: center;
 	font-weight: 600;
 	font-size: 0.75rem;
-	writing-mode: vertical-lr;
+	writing-mode: vertical-rl;
 	border: hsl(var(--tertiary-300)) 1.75px solid;
 	border-radius: 0.25rem;
 	display: inline-block;

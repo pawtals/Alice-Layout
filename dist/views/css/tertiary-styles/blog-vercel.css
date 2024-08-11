@@ -412,6 +412,80 @@ nav .top {
   background: var(--tertiary-100) !important;
   border-bottom: 1px var(--tertiary-200) solid;
 }
+nav .top .center {
+  display: flex;
+  align-items: center;
+}
+nav .top .center form {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 var(--g-100);
+}
+nav .top .center form label {
+  display: none;
+}
+nav .top .center form .search-wrapper {
+  display: contents;
+}
+nav .top .center form input {
+  all: unset;
+  width: max(20%, 10rem);
+  padding: calc(var(--g-25) + 2px) var(--g-75);
+  background: var(--tertiary-200);
+  text-align: left;
+  font-size: var(--g-100);
+  order: 2;
+  border-radius: 0 var(--g-25) var(--g-25) 0;
+  transition: all 400ms;
+}
+nav .top .center form input:focus {
+  width: max(30%, 14rem);
+}
+nav .top .center form button {
+  all: unset;
+  border-radius: var(--g-25) 0 0 var(--g-25);
+  background: var(--tertiary-200);
+  font-size: 0;
+  height: 2.25rem;
+  width: 2.5rem;
+  position: relative;
+}
+nav .top .center form button::after {
+  content: " ";
+  width: var(--g-100);
+  height: var(--g-100);
+  background: center/contain no-repeat url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+nav .top .center form button:hover {
+  background: var(--tertiary-300);
+}
+nav .top .right {
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--g-50);
+}
+nav .top .right form, nav .top .right .support-right {
+  display: contents !important;
+}
+nav .top .right br {
+  display: none;
+}
+nav .top .right a, nav .top .right button {
+  all: unset;
+  font-size: var(--g-100);
+  padding: var(--g-25) var(--g-75) !important;
+  border-radius: var(--g-25);
+  border: 1px solid var(--tertiary-500);
+}
+nav .top .right a img, nav .top .right button img {
+  width: var(--g-100);
+  height: var(--g-100);
+}
 nav .links {
   position: relative;
   background: none !important;
@@ -460,6 +534,20 @@ nav img.logo-fallback {
   height: 3.85rem !important;
   aspect-ratio: unset !important;
   image-rendering: optimizeQuality;
+}
+
+.container footer {
+  background: var(--tertiary-100);
+  border-top: 1px solid var(--tertiary-200);
+  margin: 0;
+  color: white;
+}
+.container footer ::after {
+  display: none;
+}
+.container footer a {
+  color: var(--link-color);
+  text-decoration: none !important;
 }
 
 /*# sourceMappingURL=blog-vercel.css.map */

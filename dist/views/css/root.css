@@ -1,1 +1,14 @@
-@import"https://pawtals.github.io/Alice-Layout/dist/views/css/primary-layout-component.css";@import"https://pawtals.github.io/Alice-Layout/dist/views/css/right-col/right-column-component.css";@import"https://pawtals.github.io/Alice-Layout/dist/views/css/right-col/rc-secondary-blurbs-component.css";@import"https://pawtals.github.io/Alice-Layout/dist/views/css/right-col/rc-secondary-comment-component.css";@import"https://pawtals.github.io/Alice-Layout/dist/views/css/right-col/rc-tertiary-blurbs-component.css";@import"https://pawtals.github.io/Alice-Layout/dist/views/css/left-col/left-column-component.css";@import"https://pawtals.github.io/Alice-Layout/dist/views/css/left-col/lc-secondary-interests-component.css";@import"https://pawtals.github.io/Alice-Layout/dist/views/css//left-col/lc-tertiary-interests-component.css";@import"https://pawtals.github.io/Alice-Layout/dist/views/css/!PRIMARY-CONDITIONALS!.css";@import"https://pawtals.github.io/Alice-Layout/dist/views/css/left-col/!LC-MEDIA-CONDITIONALS!.css";@import"https://pawtals.github.io/Alice-Layout/dist/views/css/right-col/!RC-MEDIA-CONDITIONALS!.css"
+/* Import styling */
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css/primary-layout-component.css");
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css/right-col/right-column-component.css");
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css/right-col/rc-secondary-blurbs-component.css");
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css/right-col/rc-secondary-comment-component.css");
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css/right-col/rc-tertiary-blurbs-component.css");
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css/left-col/left-column-component.css");
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css/left-col/lc-secondary-interests-component.css");
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css//left-col/lc-tertiary-interests-component.css");
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css/!PRIMARY-CONDITIONALS!.css");
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css/left-col/!LC-MEDIA-CONDITIONALS!.css");
+@import url("https://pawtals.github.io/Alice-Layout/dist/views/css/right-col/!RC-MEDIA-CONDITIONALS!.css");
+
+/*# sourceMappingURL=root.css.map */

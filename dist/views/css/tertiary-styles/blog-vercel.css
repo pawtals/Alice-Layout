@@ -536,7 +536,7 @@ nav .links li::after {
   display: none;
 }
 nav img.logo-fallback {
-  content: url("https://github.com/pawtals/Alice-Layout/blob/main/dist/views/css/tertiary-styles/Group%202.svg");
+  content: url("https://pawtals.github.io/Alice-Layout/dist/views/css/tertiary-styles/Group%202.svg");
   object-fit: contain;
   width: 7.5rem !important;
   height: 3.85rem !important;

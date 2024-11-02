@@ -272,7 +272,7 @@ ol ::marker {
   padding: 0 0 0 1.5rem;
 }
 #comments .inner > p {
-  display: none;
+  font-size: 0;
 }
 #comments .inner table,
 #comments .inner table tbody {
@@ -899,6 +899,34 @@ span.snippet {
   100% {
     text-shadow: 0px 0px 10px red;
   }
+}
+
+#comments.comments .inner > a button, #comments.comments .inner > p > b > a:nth-of-type(2) {
+    font-size: 0;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100rem;
+    border: unset;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+    background: rgba(180, 200, 190);
+}
+
+#comments.comments .inner > a button, #comments.comments .inner > p > b > a:nth-of-type(2) {
+  box-shadow: 0px 0px 6px white;
+}
+
+#comments.comments .inner > a button::before, #comments.comments .inner > p > b > a:nth-of-type(2) {
+    content: '';
+    width: 0.75rem;
+    height: 0.75rem;
+    background: center / contain url("https://icon-library.com/images/free-comment-icon/free-comment-icon-0.jpg");
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 
 /*# sourceMappingURL=blog-vercel.css.map */

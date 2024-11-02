@@ -1,12 +1,12 @@
 @font-face {
   font-family: Geist;
-  src: url("./GeistVF.woff2") format("woff2-variations");
+  src: url("https://pawtals.github.io/Alice-Layout/dist/views/css/tertiary-styles/GeistVF.woff2") format("woff2-variations");
   font-weight: 100 900;
   font-display: swap;
 }
 @font-face {
   font-family: Geist Mono;
-  src: url("./GeistMonoVF.woff2") format("woff2-variations");
+  src: url("https://pawtals.github.io/Alice-Layout/dist/views/css/tertiary-styles/GeistMonoVF.woff2") format("woff2-variations");
   font-weight: 100 900;
   font-display: swap;
 }
@@ -536,7 +536,7 @@ nav .links li::after {
   display: none;
 }
 nav img.logo-fallback {
-  content: url("../../Group\ 2.svg");
+  content: url("https://github.com/pawtals/Alice-Layout/blob/main/dist/views/css/tertiary-styles/Group%202.svg");
   object-fit: contain;
   width: 7.5rem !important;
   height: 3.85rem !important;
@@ -792,7 +792,7 @@ pre.hljs {
   content: " ";
   width: var(--g-100);
   height: var(--g-100);
-  background: center/contain no-repeat url("./link.svg");
+  background: center/contain no-repeat url("https://github.com/pawtals/Alice-Layout/blob/main/dist/views/css/tertiary-styles/link.svg");
   display: inline-block;
   vertical-align: -0.2rem;
   margin-inline: var(--g-25);

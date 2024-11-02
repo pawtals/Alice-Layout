@@ -784,7 +784,7 @@ pre.hljs {
   border-left: var(--tertiary-200) 2px solid;
 }
 
-.content.showcase[ec=true] {
+.content.showcase:has(.hljs) {
   display: flex;
 }
 

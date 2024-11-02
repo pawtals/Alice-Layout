@@ -792,7 +792,7 @@ pre.hljs {
   content: " ";
   width: var(--g-100);
   height: var(--g-100);
-  background: center/contain no-repeat url("https://github.com/pawtals/Alice-Layout/blob/main/dist/views/css/tertiary-styles/link.svg");
+  background: center/contain no-repeat url("https://pawtals.github.io/Alice-Layout/dist/views/css/tertiary-styles/link.svg");
   display: inline-block;
   vertical-align: -0.2rem;
   margin-inline: var(--g-25);

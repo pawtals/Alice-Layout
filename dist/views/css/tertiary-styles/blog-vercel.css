@@ -331,18 +331,13 @@ ol ::marker {
 }
 
 span.pinned {
-  font-size: 0.75rem !important;
-  color: white !important;
-  margin-top: 0 !important;
-  float: unset;
-  font-weight: 200 !important;
-  font-style: unset !important;
+  font-size: 0 !important;
 }
 
 body .comments-table span.pinned img {
   border-radius: 10rem;
-  height: 0.75rem;
-  width: 0.75rem;
+  height: 0.75rem !important;
+  width: 0.75rem !important;
   border: white 1px solid;
   filter: saturate(0) brightness(10);
   object-fit: fill;

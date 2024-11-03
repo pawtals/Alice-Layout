@@ -27,7 +27,7 @@
   --g-400: 4rem;
 }
 
-.content a, .comments-table tr td:nth-child(2) p:nth-child(2) a {
+.content a, .comments-table tr td:nth-child(2) p:nth-of-type(2) a {
   color: var(--link-color) !important;
 }
 
@@ -325,7 +325,30 @@ ol ::marker {
   margin: var(--g-25) 0 0 0 !important;
   order: 1;
 }
-#comments .inner tr td:nth-child(2) > p:nth-of-child(1)::before {
+
+#comments .inner tr td:nth-child(2):has(span) p:nth-of-type(1) {
+  margin: none !important;
+}
+
+span.pinned {
+  font-size: 0.75rem !important;
+  color: white !important;
+  margin-top: 0 !important;
+  float: unset;
+  font-weight: 200 !important;
+  font-style: unset !important;
+}
+
+body .comments-table span.pinned img {
+  border-radius: 10rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  border: white 1px solid;
+  filter: saturate(0) brightness(10);
+  object-fit: fill;
+}
+
+#comments .inner tr td:nth-child(2) > p:nth-of-type(1)::before {
   content: " ";
   display: inline-block;
   width: var(--g-50);

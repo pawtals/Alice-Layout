@@ -27,7 +27,7 @@
   --g-400: 4rem;
 }
 
-.content a {
+.content a, .comments-table tr td:nth-child(2) p:nth-child(2) a {
   color: var(--link-color) !important;
 }
 
@@ -316,7 +316,7 @@ ol ::marker {
   padding: 0;
   gap: var(--g-25);
 }
-#comments .inner tr td:nth-child(2) br {
+#comments .inner tr td:nth-child(2) > br {
   display: none;
 }
 #comments .inner tr td:nth-child(2) > p:nth-child(1) {

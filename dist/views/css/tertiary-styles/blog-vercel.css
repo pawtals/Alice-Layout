@@ -11,6 +11,14 @@
   font-display: swap;
 }
 :root {
+  --tertiary-100: rgb(15, 15, 15);
+  --tertiary-200: rgb(40, 40, 40);
+  --tertiary-300: rgb(90, 90, 90);
+  --tertiary-400: rgb(133, 133, 133);
+  --tertiary-500: rgb(255, 255, 255);
+  --text-color: rgb(255, 255, 255);
+  --link-color: rgb(199, 255, 50);
+
   --tertiary-100: oklch(15% 0 0);
   --tertiary-200: oklch(25% 0 0);
   --tertiary-300: oklch(35% 0 0);
@@ -18,6 +26,7 @@
   --tertiary-500: oklch(100% 0 0);
   --text-color: oklch(100% 0 0);
   --link-color: oklch(100% 0.27 132);
+  
   --g-25: 0.34rem;
   --g-50: 0.5rem;
   --g-75: 0.75rem;
@@ -281,6 +290,7 @@ ol ::marker {
 #comments .inner tr {
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.5rem;
 }
 #comments .inner tr td:nth-child(1) {
   padding: 0;
